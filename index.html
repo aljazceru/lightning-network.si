@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightning Network</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold text-blue-800 mb-6">⚡ Lightning Network</h1>
+
+    
+    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Povezava z Bitcoinom</h2>
+    <p>Lightning Network je zasnovan kot dodatek k Bitcoinu, ki rešuje nekatere njegove omejitve – predvsem počasnost in višje stroške pri pogostih ali majhnih transakcijah. Bitcoin sam omogoča varen prenos vrednosti, vendar je zaradi tehničnih omejitev težko uporabljati za vsakodnevne male nakupe. Lightning Network to reši z vzpostavitvijo "zunanjih kanalov", kjer se plačila izvedejo skoraj v trenutku. Celoten sistem pa še vedno temelji na osnovni varnosti Bitcoina, saj se končni rezultati po potrebi vedno lahko preverijo in izvedejo z uporabo Bitcoinovega omrežja. Lightning tako dopolnjuje Bitcoin in mu omogoča razširljivost in praktičnost za množično uporabo.</p>
+      <p>Lightning Network omogoča <strong>takojšnja, varna in izredno poceni digitalna plačila</strong>. Namesto da bi vsako transakcijo preverjali vsi, uporabniki uporabljajo pametne dogovore in povezane kanale, prek katerih si lahko neposredno in hitro izmenjujejo sredstva.</p>
+    </section>
+
+
+      <p class="mb-4">Lightning Network uporablja poseben sistem imenovan "plačilni kanali", ki omogoča neposredno izmenjavo sredstev med dvema udeležencema. Kanali temeljijo na kriptografski pogodbi, ki zagotavlja, da so sredstva zavarovana in se prenesejo le, če se obe strani strinjata z novim stanjem.</p>
+      <p class="mb-4">Če uporabnik nima neposredne povezave s ciljno osebo, sistem samodejno poišče pot preko drugih uporabnikov, pri čemer vsaka vmesna točka samo posreduje sredstva, ne da bi jih lahko zadržala. To omogoča decentralizirano in varno usmerjanje plačil.</p>
+      <p class="mb-4">Ena glavnih prednosti tega pristopa je, da vmesne transakcije niso nikjer javno zabeležene. Vse dokler se kanal ne zapre, so vsa plačila "lokalna" in skoraj brezplačna. Ko se kanal zapre, se končni rezultat pošlje kot uradna transakcija.</p>
+      <ol class="list-decimal list-inside space-y-2">
+        <li><strong>Odpiranje kanala</strong>: Dva uporabnika "zakleneta" določena sredstva v skupni pogodbi.</li>
+        <li><strong>Izmenjava plačil</strong>: V tem kanalu si lahko poljubno pogosto pošiljata sredstva.</li>
+        <li><strong>Zapiranje kanala</strong>: Ob koncu se zgolj zadnje stanje uporabi za poravnavo.</li>
+        <li><strong>Usmerjanje</strong>: Mreža omogoča posredne prenose prek drugih uporabnikov, zavarovane s kriptografijo.</li>
+      </ol>
+    </section>
+<br><br>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Prednosti</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Hitrost</strong>: Transakcije se zgodijo v nekaj sekundah.</li>
+        <li><strong>Nizki stroški</strong>: Stroški znašajo delček centa.</li>
+        <li><strong>Skalabilnost</strong>: Omrežje omogoča milijone transakcij na sekundo.</li>
+        <li><strong>Zasebnost</strong>: Transakcije niso javno beležene.</li>
+        <li><strong>Varno</strong>: Kriptografski mehanizmi ščitijo sredstva uporabnikov.</li>
+        <li><strong>Brez tveganja posrednikov</strong>: Plačila se izvršijo samo ob popolni izpolnitvi pogojev – sicer se sredstva samodejno povrnejo.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Primeri uporabe</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="bg-white p-4 shadow rounded">💸 Mikroplačila za vsebine – npr. napitnine ustvarjalcem</li>
+        <li class="bg-white p-4 shadow rounded">🎧 Plačilo po sekundi poslušanja podcasta (npr. preko aplikacije Fountain)</li>
+        <li class="bg-white p-4 shadow rounded">🌍 Cenejša in hitrejša mednarodna nakazila brez bank</li>
+        <li class="bg-white p-4 shadow rounded">🤖 Avtomatska plačila med napravami – npr. EV in pametne polnilnice</li>
+        <li class="bg-white p-4 shadow rounded">🔌 Pametne mreže za energetske trge (plačevanje elektrike v realnem času)</li>
+        <li class="bg-white p-4 shadow rounded">🕹️ Plačila v igrah in vsebinah po meri (npr. plačaj za vsak klik, krog ali funkcijo)</li>
+      </ul>
+    </section>
+
+    
+      <div>
+        <h3 class="text-lg font-semibold">Shranjevanje vrednosti pred uporabo</h3>
+        <p>Da bi bil Lightning Network uspešen kot plačilna plast, mora biti Bitcoin najprej sprejet kot sredstvo za shranjevanje vrednosti. Ljudje bodo pripravljeni uporabljati Bitcoin za plačila le, če ga bodo prej prepoznali kot zanesljivo sredstvo za ohranjanje bogastva. Tako se monetizacija začne s hrambenim vidikom ("digitalno zlato"), nato pa sledi široka uporaba kot sredstvo menjave.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Plastično skaliranje</h3>
+        <p>Namesto da bi Bitcoin poskušal obdelati milijone plačil neposredno, se uporablja večplastna struktura. Prva plast skrbi za varnost in končno poravnavo, Lightning Network pa kot druga plast omogoča hitro in poceni vsakodnevno uporabo. To je podobno kot finančni sistemi, kjer imajo centralne banke sisteme za končne poravnave, medtem ko uporabniki uporabljajo kartice ali aplikacije.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Geografska razlika v uporabi</h3>
+        <p>V razvitih državah ljudje Bitcoin večinoma uporabljajo kot naložbo. V državah z visoko inflacijo in slabimi bančnimi storitvami pa ima Lightning tudi praktično vlogo pri vsakodnevnih transakcijah. Uporaba v Nigeriji, El Salvadorju in Ukrajini kaže, da se tehnologija najprej uveljavlja tam, kjer jo ljudje resnično potrebujejo.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Volatilnost in sprejemanje</h3>
+        <p>Volatilnost je neizogiben del zgodnje monetizacije. Bitcoin še ni dosegel stabilne faze, saj se šele uveljavlja kot globalno priznana oblika denarja. Ko se bo njegova razširjenost povečala in ga bo imelo v lasti več ljudi, se bo njegova volatilnost zmanjšala in pripravljenost za uporabo kot plačilno sredstvo bo večja.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Lightning kot globalna infrastrukturna plast</h3>
+        <p>Lightning lahko postane osnova za prenos ne samo bitcoinov, ampak tudi drugih valut – z uporabo bitcoin likvidnosti kot univerzalnega "mostu". Tako lahko na primer hitro prenašamo dolarske zneske prek Lightninga, kar ustvarja globalni sistem za takojšnja, čezmejna nakazila brez posrednikov.</p>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-lg font-semibold">Pametne pogodbe brez zaupanja</h3>
+          <p>Posredniki so varovani s kriptografskimi pogodbami. Če ne izvršijo svojega dela, ne dobijo plačila. Tako sistem ne potrebuje zaupanja v nobenega vmesnega člena.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Odpornost na napake</h3>
+          <p>Če eden od udeležencev izgine ali poskuša goljufati, obstajajo vgrajeni mehanizmi, ki drugega zaščitijo – vključno s kaznovanjem za zlorabo starih podatkov.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Rast omrežja</h3>
+          <p>Lightning Network trenutno vključuje več kot 11.000 aktivnih vozlišč in več kot 43.000 odprtih kanalov. V omrežju je več kot 500 milijonov USD vrednosti.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Uporaba brez centralnega nadzora</h3>
+          <p>Omrežje ne potrebuje osrednjih strežnikov ali soglasja tretjih oseb. Vsak uporabnik lahko neodvisno upravlja s svojimi sredstvi in komunikacijo.</p>
+        </div>
+      </div>
+    </section>
+    <br>  <br>
+    <section class="mb-10">
+      <p>Lightning Network je revolucija v digitalnem plačevanju. Z njim so mogoča globalna mikroplačila, varni prenosi sredstev in uporaba v avtomatiziranih okoljih – brez bank, brez čakanja in brez nadzora. Je osnova za novo digitalno ekonomijo prihodnosti.</p>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500">
+      <p>Več informacij na: <a href="https://lightning.network" class="text-blue-600 underline">lightning.network</a></p>
+    </footer>
+  </div>
+
+<div class="max-w-3xl mx-auto px-4 py-10">
+  <h2 class="text-2xl font-bold text-blue-800 mb-4">Poglobljene strani</h2>
+  <ul class="list-disc list-inside space-y-2">
+    <li><a href="store_of_value.html" class="text-blue-600 underline">🔐 Shranjevanje vrednosti vs. sredstvo menjave</a></li>
+    <li><a href="scaling_layers.html" class="text-blue-600 underline">🏗️ Skaliranje v plasteh – zakaj to deluje</a></li>
+    <li><a href="adoption_patterns.html" class="text-blue-600 underline">🌍 Vzorci sprejemanja Bitcoina in Lightninga</a></li>
+    <li><a href="liquidity_routing.html" class="text-blue-600 underline">🔄 Likvidnost in usmerjanje plačil</a></li>
+    <li><a href="lightning_faq.html" class="text-blue-600 underline">❓ Pogosta vprašanja in pomisleki o Lightningu</a></li>
+  </ul>
+</div>
+</body>
+</html>

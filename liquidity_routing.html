@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likvidnost in usmerjanje</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 px-6 py-10 max-w-3xl mx-auto">
+  <nav class="mb-8 border-b pb-4">
+    <ul class="flex flex-wrap gap-4 text-blue-700 text-sm">
+      <li><a href="index.html" class="hover:underline">🏠 Domov</a></li>
+      <li><a href="store_of_value.html" class="hover:underline">🔐 Shrani vrednost</a></li>
+      <li><a href="scaling_layers.html" class="hover:underline">🏗️ Plasti</a></li>
+      <li><a href="adoption_patterns.html" class="hover:underline">🌍 Sprejemanje</a></li>
+      <li><a href="liquidity_routing.html" class="hover:underline">🔄 Usmerjanje</a></li>
+      <li><a href="lightning_faq.html" class="hover:underline font-semibold">❓ FAQ</a></li>
+    </ul>
+  </nav>
+  <h1 class="text-3xl font-bold text-blue-800 mb-6">🔄 Likvidnost in usmerjanje plačil</h1>
+
+  <p class="mb-4">Plačila v Lightning Network potekajo preko kanalske mreže. Uspešno plačilo mora najti pot od pošiljatelja do prejemnika prek vozlišč, ki imajo dovolj razpoložljive likvidnosti.</p>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-6 mb-2">Kaj je likvidnost?</h2>
+  <p class="mb-4">Likvidnost pomeni, da ima kanal dovolj prostih sredstev v pravo smer. Če hočeš poslati 50 €, mora biti v tvoji povezavi s sosedom 50 € prostega prostora. Večja plačila zahtevajo več usklajenih kanalov.</p>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-6 mb-2">Kako deluje usmerjanje?</h2>
+  <p class="mb-4">Plačilo se lahko usmeri prek več vozlišč – na primer: Ti → Vozlišče A → Vozlišče B → Prejemnik. Sistem samodejno najde pot z dovolj sredstvi. Z uporabo t.i. "onion routing" vmesna vozlišča ne vedo, kdo je pošiljatelj in kdo je končni prejemnik.</p>
+
+  <p class="mb-4">Več vozlišč in več sredstev v sistemu pomeni boljšo zanesljivost in večjo uporabnost Lightning mreže.</p>
+
+  <a href="index.html" class="text-blue-600 underline mt-10 inline-block">⬅ Nazaj na glavno stran</a>
+</body>
+</html>
