@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Začetni vodič za Lightning Network</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 px-6 py-10 max-w-3xl mx-auto">
+  <nav class="mb-8 border-b pb-4">
+    <ul class="flex flex-wrap gap-4 text-blue-700 text-sm">
+      <li><a href="index.html" class="hover:underline">🏠 Domov</a></li>
+      <li><a href="getting_started.html" class="hover:underline font-semibold">🚀 Začni</a></li>
+      <li><a href="wallet_comparison.html" class="hover:underline">💼 Denarnice</a></li>
+      <li><a href="merchant_guide.html" class="hover:underline">🏪 Za trgovce</a></li>
+      <li><a href="node_setup.html" class="hover:underline">⚙️ Vozlišča</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-6">🚀 Začetni vodič za Lightning Network</h1>
+
+  <p class="mb-6 text-lg">Dobrodošli! Ta vodič vas bo korak za korakom popeljal skozi vaše prvo Lightning plačilo. V manj kot 10 minutah boste lahko poslali ali prejeli Bitcoin prek najhitrejše plačilne mreže na svetu.</p>
+
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+    <p class="font-semibold">Kaj potrebujete:</p>
+    <ul class="list-disc list-inside mt-2">
+      <li>Pametni telefon (Android ali iOS)</li>
+      <li>5-10 minut časa</li>
+      <li>Majhen znesek Bitcoina za testiranje (5-20 €)</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Korak 1: Izberite denarnico</h2>
+  <p class="mb-4">Za začetek priporočamo eno od teh denarnic, ker so preproste za uporabo:</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-white border border-gray-300 p-4 rounded shadow-sm">
+      <h3 class="font-bold text-lg mb-2">Phoenix Wallet</h3>
+      <p class="text-sm mb-2">✅ Odlična za začetnike</p>
+      <p class="text-sm mb-2">✅ Samodejno upravljanje kanalov</p>
+      <p class="text-sm mb-2">✅ Ne-skrbniška (vi nadzorujete sredstva)</p>
+      <p class="text-sm text-gray-600">Dostopno: iOS, Android</p>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-4 rounded shadow-sm">
+      <h3 class="font-bold text-lg mb-2">Breez Wallet</h3>
+      <p class="text-sm mb-2">✅ Enostavna za uporabo</p>
+      <p class="text-sm mb-2">✅ Vgrajeni podcasti in storitve</p>
+      <p class="text-sm mb-2">✅ Ne-skrbniška</p>
+      <p class="text-sm text-gray-600">Dostopno: iOS, Android</p>
+    </div>
+  </div>
+
+  <p class="mb-6">Za podrobno primerjavo več denarnic si oglejte našo <a href="wallet_comparison.html" class="text-blue-600 underline">stran s primerjavo denarnic</a>.</p>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Korak 2: Namestitev in začetna nastavitev</h2>
+
+  <div class="bg-gray-50 p-5 rounded mb-6">
+    <p class="font-semibold mb-3">Primer: Phoenix Wallet</p>
+    <ol class="list-decimal list-inside space-y-3">
+      <li><strong>Prenesite aplikacijo</strong>
+        <p class="ml-6 text-sm text-gray-700 mt-1">Poiščite "Phoenix Wallet" v App Store ali Google Play</p>
+      </li>
+      <li><strong>Odprite aplikacijo</strong>
+        <p class="ml-6 text-sm text-gray-700 mt-1">Pri prvem zagonu boste pozvani k ustvarjanju nove denarnice</p>
+      </li>
+      <li><strong>POMEMBNO: Shranite varnostno kopijo</strong>
+        <p class="ml-6 text-sm text-gray-700 mt-1">Aplikacija vam bo pokazala 12 besed. To je vaš "recovery seed" – zapišite ga na papir in ga shranite na varno. To je edini način za obnovitev dostopa, če izgubite telefon.</p>
+      </li>
+      <li><strong>Potrdite varnostno kopijo</strong>
+        <p class="ml-6 text-sm text-gray-700 mt-1">Aplikacija vas bo prosila, da vnesete nekaj besed za potrditev</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+    <p class="font-semibold text-red-800">⚠️ Varnostno opozorilo:</p>
+    <ul class="list-disc list-inside mt-2 text-red-800 text-sm">
+      <li>Nikoli ne delite svojih 12 besed z nikomer</li>
+      <li>Ne shranjujte jih v oblaku ali na fotografiji</li>
+      <li>Kdorkoli ima dostop do teh besed, lahko vzame vaša sredstva</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Korak 3: Prva polnitev denarnice</h2>
+  <p class="mb-4">Zdaj morate v svojo Lightning denarnico prenesti nekaj Bitcoina. Obstajata dva načina:</p>
+
+  <h3 class="text-xl font-semibold mt-6 mb-3">Način A: Neposredna polnitev (če že imate Bitcoin)</h3>
+  <ol class="list-decimal list-inside space-y-3 mb-6">
+    <li>V Phoenix Wallet pritisnite gumb <strong>"Prejmi"</strong> (Receive)</li>
+    <li>Prikaže se QR koda z Bitcoin naslovom</li>
+    <li>Odprite svojo drugo Bitcoin denarnico (npr. Binance, Coinbase, ali hardver denarnico)</li>
+    <li>Pošljite manjši znesek (npr. 20 €) na ta naslov</li>
+    <li>Počakajte 10-30 minut, da se transakcija potrdi na Bitcoin omrežju</li>
+    <li>Ko pride Bitcoin v Phoenix, bo aplikacija samodejno odprla Lightning kanal</li>
+  </ol>
+
+  <h3 class="text-xl font-semibold mt-6 mb-3">Način B: Nakup znotraj aplikacije</h3>
+  <p class="mb-4">Nekatere denarnice (kot je Breez) omogočajo nakup Bitcoina direktno v aplikaciji z bančno kartico. To je najhitrejši način za začetnike, vendar običajno vključuje višje provizije.</p>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Korak 4: Vaše prvo Lightning plačilo</h2>
+
+  <h3 class="text-xl font-semibold mt-6 mb-3">Prejmite plačilo:</h3>
+  <ol class="list-decimal list-inside space-y-3 mb-6">
+    <li>Pritisnite <strong>"Prejmi"</strong> (Receive)</li>
+    <li>Vnesite znesek (ali pustite prazno za poljuben znesek)</li>
+    <li>Delite QR kodo ali kopirajte "Lightning invoice" (začne se z "lnbc...")</li>
+    <li>Pošiljatelj skenira QR kodo in potrdi plačilo</li>
+    <li>Sredstva prejmete v 1-2 sekundah! ⚡</li>
+  </ol>
+
+  <h3 class="text-xl font-semibold mt-6 mb-3">Pošljite plačilo:</h3>
+  <ol class="list-decimal list-inside space-y-3 mb-6">
+    <li>Pridobite Lightning invoice od prejemnika</li>
+    <li>V svoji denarnici pritisnite <strong>"Pošlji"</strong> (Send)</li>
+    <li>Skenirajte QR kodo ali prilepite invoice</li>
+    <li>Preverite znesek in potrdite</li>
+    <li>Plačilo je izvedeno v trenutku! ✅</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Korak 5: Preizkusite Lightning v praksi</h2>
+  <p class="mb-4">Zdaj ko znate uporabljati Lightning, preizkusite te storitve:</p>
+
+  <div class="space-y-4 mb-6">
+    <div class="bg-white border border-gray-300 p-4 rounded">
+      <h3 class="font-bold mb-2">🎧 Fountain FM</h3>
+      <p class="text-sm">Poslušajte podcaste in nagrajujte ustvarjalce z mikroplačili (satoshi na minuto). Sami tudi zaslužite Bitcoin za poslušanje.</p>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-4 rounded">
+      <h3 class="font-bold mb-2">🕹️ LN Markets</h3>
+      <p class="text-sm">Trgovanje z Bitcoin derivati z uporabo Lightning depozitov in dvigov.</p>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-4 rounded">
+      <h3 class="font-bold mb-2">🎮 Zebedee (ZBDGG)</h3>
+      <p class="text-sm">Igrajte igre in zaslužite Bitcoin. Plačajte za dodatke in nadgradnje z Lightning plačili.</p>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-4 rounded">
+      <h3 class="font-bold mb-2">☕ BTCPay Server trgovci</h3>
+      <p class="text-sm">Več tisoč spletnih trgovin po vsem svetu sprejema Lightning plačila. Poiščite BTCMap za zemljevid fizičnih lokacij.</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Pogosta vprašanja začetnikov</h2>
+
+  <div class="space-y-4 mb-6">
+    <div>
+      <h3 class="font-semibold">Koliko Bitcoina potrebujem za začetek?</h3>
+      <p class="text-sm text-gray-700 mt-1">Za testiranje zadostuje že 5-10 €. Za redno uporabo priporočamo 20-100 €.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali moram plačevati provizije?</h3>
+      <p class="text-sm text-gray-700 mt-1">Lightning provizije so minimalne (običajno manj kot 1 cent). Plačate pa provizijo Bitcoin omrežju, ko prvič napolnite denarnico ali zapreste kanal.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali je Lightning varen?</h3>
+      <p class="text-sm text-gray-700 mt-1">Da, če uporabljate ne-skrbniške denarnice (kot Phoenix ali Breez) in varno hranite svojo varnostno kopijo. Vaša sredstva so kriptografsko zavarovana.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Kaj če izgubim telefon?</h3>
+      <p class="text-sm text-gray-700 mt-1">Če imate shranjenih 12 besed, lahko obnovite svojo denarnico na novem telefonu. Brez varnostne kopije so sredstva trajno izgubljena.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Kaj je razlika med Bitcoin in Lightning naslovom?</h3>
+      <p class="text-sm text-gray-700 mt-1">Bitcoin naslovi začnejo s "bc1..." ali "3..." in se uporabljajo za on-chain transakcije. Lightning invoice začne z "lnbc..." in se uporablja za Lightning plačila. Večina sodobnih denarnic podpira oboje.</p>
+    </div>
+  </div>
+
+  <div class="bg-green-50 border-l-4 border-green-500 p-4 mt-8 mb-6">
+    <p class="font-semibold text-green-800">✅ Čestitamo!</p>
+    <p class="text-green-800 mt-2">Zdaj ste del Lightning Network! Lahko izvajate takojšnja globalna plačila brez posrednikov, cenzure ali visokih provizij.</p>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-8 mb-4">Naslednji koraki</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li><a href="wallet_comparison.html" class="text-blue-600 underline">Raziščite različne denarnice</a> in najdite tisto, ki najbolj ustreza vašim potrebam</li>
+    <li><a href="lightning_faq.html" class="text-blue-600 underline">Preberite pogosta vprašanja</a> za globljo razumevanje</li>
+    <li><a href="node_setup.html" class="text-blue-600 underline">Razmislite o zagonu lastnega vozlišča</a> za popoln nadzor</li>
+    <li>Pridružite se Lightning skupnosti na Twitterju, Redditu ali Telegram</li>
+  </ul>
+
+  <a href="index.html" class="text-blue-600 underline mt-10 inline-block">⬅ Nazaj na glavno stran</a>
+</body>
+</html>

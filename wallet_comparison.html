@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primerjava Lightning denarnic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 px-6 py-10 max-w-5xl mx-auto">
+  <nav class="mb-8 border-b pb-4">
+    <ul class="flex flex-wrap gap-4 text-blue-700 text-sm">
+      <li><a href="index.html" class="hover:underline">🏠 Domov</a></li>
+      <li><a href="getting_started.html" class="hover:underline">🚀 Začni</a></li>
+      <li><a href="wallet_comparison.html" class="hover:underline font-semibold">💼 Denarnice</a></li>
+      <li><a href="merchant_guide.html" class="hover:underline">🏪 Za trgovce</a></li>
+      <li><a href="node_setup.html" class="hover:underline">⚙️ Vozlišča</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-6">💼 Primerjava Lightning denarnic</h1>
+
+  <p class="mb-6 text-lg">Izbira prave Lightning denarnice je odvisna od vaših potreb. Ključna odločitev je med <strong>skrbniškimi</strong> (custodial) in <strong>ne-skrbniškimi</strong> (non-custodial) denarnicami.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-green-50 border-l-4 border-green-500 p-5">
+      <h3 class="font-bold text-lg mb-2">Ne-skrbniške denarnice</h3>
+      <p class="text-sm mb-3">Vi nadzorujete svoje ključe in sredstva. Nihče drug ne more dostopati do vašega denarja.</p>
+      <p class="text-sm font-semibold text-green-800">✅ Priporočeno za:</p>
+      <ul class="text-sm list-disc list-inside text-green-800">
+        <li>Večje zneske</li>
+        <li>Dolgoročno hranjenje</li>
+        <li>Maksimalno varnost</li>
+      </ul>
+    </div>
+
+    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5">
+      <h3 class="font-bold text-lg mb-2">Skrbniške denarnice</h3>
+      <p class="text-sm mb-3">Storitev hrani vaše ključe. Lažje za uporabo, vendar morate zaupati ponudniku.</p>
+      <p class="text-sm font-semibold text-yellow-800">⚠️ Primerno za:</p>
+      <ul class="text-sm list-disc list-inside text-yellow-800">
+        <li>Manjše zneske</li>
+        <li>Začetnike</li>
+        <li>Pogosto uporabo</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-10 mb-6">Podrobna primerjava</h2>
+
+  <!-- Phoenix Wallet -->
+  <div class="bg-white border-2 border-blue-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-800">Phoenix Wallet</h3>
+        <p class="text-sm text-gray-600">Od: ACINQ (Francija)</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">NE-SKRBNIŠKA</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Odlična za začetnike</li>
+          <li>Samodejno upravljanje kanalov</li>
+          <li>Čist in preprost vmesnik</li>
+          <li>Ne-skrbniška (vi imate ključe)</li>
+          <li>Podpira on-chain in Lightning</li>
+          <li>Odprtokodna</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Manjša provizija za odpiranje kanalov</li>
+          <li>Ni popolnoma prilagodljiva</li>
+          <li>Minimalni vhodni depozit (~10 €)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (dinamične provizije za kanale)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Začetnike, ki želijo ne-skrbniško rešitev z enostavno uporabo</p>
+    </div>
+  </div>
+
+  <!-- Breez Wallet -->
+  <div class="bg-white border-2 border-blue-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-800">Breez Wallet</h3>
+        <p class="text-sm text-gray-600">Od: Breez Technology</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">NE-SKRBNIŠKA</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Vgrajeni podcasti (Breez jako platforma)</li>
+          <li>Point-of-Sale funkcionalnost</li>
+          <li>Samodejno upravljanje likvidnosti</li>
+          <li>Ne-skrbniška z varnostno kopijo</li>
+          <li>Podpora za LNURL</li>
+          <li>Odprtokodna</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Nekoliko kompleksnejši vmesnik</li>
+          <li>Potrebuje več prostora za shranjevanje</li>
+          <li>Počasnejši zagon aplikacije</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (dinamične provizije)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Uporabnike, ki želijo več funkcij (podcasti, POS) z ne-skrbniško kontrolo</p>
+    </div>
+  </div>
+
+  <!-- Muun Wallet -->
+  <div class="bg-white border-2 border-purple-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-purple-800">Muun Wallet</h3>
+        <p class="text-sm text-gray-600">Od: Muun (Argentina)</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">NE-SKRBNIŠKA</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Zelo enostaven za uporabo</li>
+          <li>Brezhibna integracija Bitcoin + Lightning</li>
+          <li>Ne potrebuje upravljanja kanalov</li>
+          <li>Takojšna razpoložljivost sredstev</li>
+          <li>2-od-2 multisig varnost</li>
+          <li>Odprtokodna</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Višje provizije za Lightning plačila</li>
+          <li>Uporablja submarine swaps (dražje)</li>
+          <li>Ne pravi Lightning (uporablja hibridno metodo)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (višje provizije na Lightning transakcijah)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Začetnike, ki želijo maksimalno preprostost in ne menijo za nekoliko višje stroške</p>
+    </div>
+  </div>
+
+  <!-- Zeus -->
+  <div class="bg-white border-2 border-orange-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-800">Zeus</h3>
+        <p class="text-sm text-gray-600">Od: Zeus LN</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">NE-SKRBNIŠKA</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Lahko se poveže na lastno vozlišče</li>
+          <li>Popoln nadzor nad kanali</li>
+          <li>Vgrajena denarnica (ne potrebuje vozlišča)</li>
+          <li>Podpira LND, CLN, Eclair</li>
+          <li>Napredno upravljanje za izkušene</li>
+          <li>Odprtokodna</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Strmejša krivulja učenja</li>
+          <li>Vmesnik ni tako eleganten</li>
+          <li>Zahteva več tehničnega znanja</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (odprtokoden)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Izkušene uporabnike, ki želijo povezavo z lastnim vozliščem ali napredno upravljanje</p>
+    </div>
+  </div>
+
+  <!-- Wallet of Satoshi -->
+  <div class="bg-white border-2 border-red-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-red-800">Wallet of Satoshi</h3>
+        <p class="text-sm text-gray-600">Od: Wallet of Satoshi Pty Ltd</p>
+      </div>
+      <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">SKRBNIŠKA</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Najlažja za uporabo</li>
+          <li>Takojšnja plačila brez nastavitev</li>
+          <li>Brez upravljanja kanalov</li>
+          <li>Zelo hiter vmesnik</li>
+          <li>Idealno za testiranje Lightning</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Vi ne nadzorujete ključev</li>
+          <li>Morate zaupati podjetju</li>
+          <li>Ni primerno za večje zneske</li>
+          <li>Ni odprtokodna</li>
+          <li>Možnost zaplembe sredstev</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Začetnike za testiranje z majhnimi zneski (manj kot 50 €)</p>
+    </div>
+  </div>
+
+  <!-- BlueWallet -->
+  <div class="bg-white border-2 border-blue-400 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-700">BlueWallet</h3>
+        <p class="text-sm text-gray-600">Od: BlueWallet Services</p>
+      </div>
+      <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">SKRBNIŠKA (Lightning)</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Odlična Bitcoin denarnica</li>
+          <li>Podpora za več denarnic</li>
+          <li>Možnost povezave lastnega vozlišča</li>
+          <li>Lep in intuitiven vmesnik</li>
+          <li>Odprtokodna</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Lightning je skrbniški privzeto</li>
+          <li>Zahteva tehnično znanje za LNDHub povezavo</li>
+          <li>Lightning funkcionalnost omejena</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Platforme:</strong> iOS, Android, Desktop</p>
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (odprtokoden)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Uporabnike, ki potrebujejo odlično Bitcoin denarnico z osnovno Lightning funkcionalnostjo</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Naša priporočila</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    <div class="bg-green-50 border-2 border-green-500 rounded-lg p-5">
+      <h3 class="font-bold text-lg mb-3 text-green-800">🥇 Za začetnike</h3>
+      <p class="text-2xl font-bold mb-2">Phoenix</p>
+      <p class="text-sm">Najboljša kombinacija enostavnosti in varnosti. Ne-skrbniška z avtomatskim upravljanjem.</p>
+    </div>
+
+    <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-5">
+      <h3 class="font-bold text-lg mb-3 text-blue-800">🥈 Za testiranje</h3>
+      <p class="text-2xl font-bold mb-2">Wallet of Satoshi</p>
+      <p class="text-sm">Najhitrejši način za preizkusiti Lightning. Idealno za prve korake z majhnimi zneski.</p>
+    </div>
+
+    <div class="bg-orange-50 border-2 border-orange-500 rounded-lg p-5">
+      <h3 class="font-bold text-lg mb-3 text-orange-800">🥉 Za napredne</h3>
+      <p class="text-2xl font-bold mb-2">Zeus</p>
+      <p class="text-sm">Popoln nadzor. Povezava na lastno vozlišče ali vgrajena denarnica z naprednimi funkcijami.</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Primerjalna tabela</h2>
+
+  <div class="overflow-x-auto mb-10">
+    <table class="min-w-full bg-white border border-gray-300 text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border border-gray-300 px-4 py-2 text-left">Denarnica</th>
+          <th class="border border-gray-300 px-4 py-2">Tip</th>
+          <th class="border border-gray-300 px-4 py-2">Enostavnost</th>
+          <th class="border border-gray-300 px-4 py-2">Varnost</th>
+          <th class="border border-gray-300 px-4 py-2">Provizije</th>
+          <th class="border border-gray-300 px-4 py-2">Odprtokoden</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2 font-semibold">Phoenix</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Ne-skrbniška</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">✅</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2 font-semibold">Breez</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Ne-skrbniška</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2 font-semibold">Muun</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Ne-skrbniška</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">✅</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2 font-semibold">Zeus</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Ne-skrbniška</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2 font-semibold">Wallet of Satoshi</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Skrbniška</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">❌</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2 font-semibold">BlueWallet</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">Skrbniška (LN)</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">⭐⭐⭐⭐</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-5 mt-10">
+    <h3 class="font-bold text-lg mb-2">💡 Naš nasvet</h3>
+    <p class="mb-2">Za večino uporabnikov priporočamo <strong>Phoenix Wallet</strong>. Ponuja odlično ravnovesje med enostavnostjo uporabe in varnostjo ne-skrbniške denarnice.</p>
+    <p>Če ste popoln začetnik in želite samo preizkusiti Lightning z 5-10 €, začnite z <strong>Wallet of Satoshi</strong>, nato pa preidite na Phoenix, ko se naučite osnov.</p>
+  </div>
+
+  <a href="index.html" class="text-blue-600 underline mt-10 inline-block">⬅ Nazaj na glavno stran</a>
+</body>
+</html>
