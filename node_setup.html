@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vodič za nastavitev Lightning vozlišča</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 px-6 py-10 max-w-4xl mx-auto">
+  <nav class="mb-8 border-b pb-4">
+    <ul class="flex flex-wrap gap-4 text-blue-700 text-sm">
+      <li><a href="index.html" class="hover:underline">🏠 Domov</a></li>
+      <li><a href="getting_started.html" class="hover:underline">🚀 Začni</a></li>
+      <li><a href="wallet_comparison.html" class="hover:underline">💼 Denarnice</a></li>
+      <li><a href="merchant_guide.html" class="hover:underline">🏪 Za trgovce</a></li>
+      <li><a href="node_setup.html" class="hover:underline font-semibold">⚙️ Vozlišča</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-6">⚙️ Vodič za nastavitev Lightning vozlišča</h1>
+
+  <p class="mb-6 text-lg">Zagon lastnega Lightning vozlišča vam daje <strong>popoln nadzor</strong> nad svojimi sredstvi, zasebnostjo in sodelovanjem v mreži. Ta vodič vas bo popeljal skozi vse korake od začetka do konca.</p>
+
+  <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 mb-8">
+    <p class="font-semibold">⚠️ Pomembno opozorilo</p>
+    <p class="mt-2 text-sm">Zagon vozlišča zahteva tehnično znanje in odgovornost. Vaša sredstva so v vaši lasti, kar pomeni, da ste sami odgovorni za njihovo varnost. Pred začetkom se prepričajte, da razumete osnove Bitcoina in Lightning Network.</p>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-10 mb-6">Zakaj zagnati lastno vozlišče?</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-green-50 border-l-4 border-green-500 p-5">
+      <h3 class="font-bold text-lg mb-3">✅ Prednosti</h3>
+      <ul class="space-y-2 text-sm">
+        <li><strong>Popolna suverenost</strong> – Vi kontrolirate svoje Bitcoin ključe</li>
+        <li><strong>Maksimalna zasebnost</strong> – Ne zanašate se na tretje osebe</li>
+        <li><strong>Preverljivost</strong> – Preverite vse Bitcoin transakcije sami</li>
+        <li><strong>Podpora mreži</strong> – Prispevate k decentralizaciji</li>
+        <li><strong>Usmerjanje plačil</strong> – Zaslužite majhne provizije</li>
+        <li><strong>Eksperimentiranje</strong> – Naučite se, kako deluje protokol</li>
+      </ul>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-5">
+      <h3 class="font-bold text-lg mb-3">💰 Stroški</h3>
+      <ul class="space-y-2 text-sm">
+        <li><strong>Strojna oprema:</strong> 150-500 € (Raspberry Pi ali star računalnik)</li>
+        <li><strong>SSD disk:</strong> 50-150 € (1-2 TB)</li>
+        <li><strong>Električna energija:</strong> 5-15 €/mesec</li>
+        <li><strong>Likvidnost kanalov:</strong> Po vaši izbiri (100-1000+ €)</li>
+        <li><strong>Čas:</strong> Začetna nastavitev 4-8 ur, vzdrževanje ~1 uro/mesec</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-10 mb-6">Izbira rešitve</h2>
+
+  <p class="mb-6">Obstaja več možnosti za zagon vozlišča. Izbira je odvisna od vašega tehničnega znanja in proračuna:</p>
+
+  <!-- Umbrel -->
+  <div class="bg-white border-2 border-green-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-green-800">Umbrel</h3>
+        <p class="text-sm text-gray-600">Najlažja celostna rešitev za začetnike</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">PRIPOROČENO</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Grafični vmesnik – enostaven za uporabo</li>
+          <li>En-klik namestitev aplikacij</li>
+          <li>Bitcoin + Lightning vključena</li>
+          <li>Aktivna skupnost in podpora</li>
+          <li>Trgovina z aplikacijami (BTCPay, Mempool, itd.)</li>
+          <li>Samodejne posodobitve</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">📋 Zahteve:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Raspberry Pi 4 (4/8 GB RAM) ali računalnik</li>
+          <li>1-2 TB SSD disk (USB 3.0)</li>
+          <li>Zanesljiva internetna povezava</li>
+          <li>MicroSD kartica (za Raspberry Pi)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Stroški:</strong> Strojna oprema ~200-400 €</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 2-4 ure</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Začetnike, ki želijo enostavno in estetsko rešitev</p>
+      <p class="text-sm mt-2"><a href="https://umbrel.com" class="text-blue-600 underline" target="_blank">umbrel.com</a></p>
+    </div>
+  </div>
+
+  <!-- RaspiBlitz -->
+  <div class="bg-white border-2 border-blue-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-800">RaspiBlitz</h3>
+        <p class="text-sm text-gray-600">Za izkušene uporabnike, maksimalen nadzor</p>
+      </div>
+      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">NAPREDNO</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Več možnosti prilagajanja</li>
+          <li>Terminal vmesnik + LCD zaslon</li>
+          <li>Močne varnostne funkcije</li>
+          <li>Podpora za Tor in VPN</li>
+          <li>Odlična dokumentacija</li>
+          <li>Aktivna skupnost razvijalcev</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Zahteve:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Nekoliko več tehničnega znanja</li>
+          <li>Terminal/CLI uporaba</li>
+          <li>Dodatna strojna oprema (LCD zaslon)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Stroški:</strong> Strojna oprema ~250-450 €</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 3-6 ur</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Izkušene uporabnike, ki želijo maksimalen nadzor in varnost</p>
+      <p class="text-sm mt-2"><a href="https://raspiblitz.org" class="text-blue-600 underline" target="_blank">raspiblitz.org</a></p>
+    </div>
+  </div>
+
+  <!-- myNode -->
+  <div class="bg-white border-2 border-purple-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-purple-800">myNode</h3>
+        <p class="text-sm text-gray-600">Premium rešitev z dodatnimi funkcijami</p>
+      </div>
+      <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">PREMIUM</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Profesionalna podpora</li>
+          <li>Premium funkcije (doplačilo)</li>
+          <li>Odličen vmesnik</li>
+          <li>Veliko vgrajenih aplikacij</li>
+          <li>Enostavno upravljanje</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Premium funkcije zahtevajo licenco (~100 €)</li>
+          <li>Manj prilagodljivo kot RaspiBlitz</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Stroški:</strong> Strojna oprema ~200-400 € + Premium licenca 99 € (opcijsko)</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 2-3 ure</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Uporabnike, ki želijo premium rešitev s profesionalno podporo</p>
+      <p class="text-sm mt-2"><a href="https://mynodebtc.com" class="text-blue-600 underline" target="_blank">mynodebtc.com</a></p>
+    </div>
+  </div>
+
+  <!-- Start9 -->
+  <div class="bg-white border-2 border-orange-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-800">Start9 (Embassy)</h3>
+        <p class="text-sm text-gray-600">Osebni strežnik z vsestranskimi aplikacijami</p>
+      </div>
+      <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">VSESTRANSKI</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Ne samo Bitcoin – celoten osebni strežnik</li>
+          <li>Trgovina z decentraliziranimi aplikacijami</li>
+          <li>Zelo lep vmesnik</li>
+          <li>Samodejne varnostne kopije</li>
+          <li>Fokus na zasebnost</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Opozorila:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Višja cena (embeddovan strežnik)</li>
+          <li>Nove funkcije še v razvoju</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Stroški:</strong> Embassy Pro ~500-700 € (prenosna naprava)</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 1-2 uri (plug & play)</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Uporabnike, ki želijo kompletno rešitev za zasebnost in decentralizirane storitve</p>
+      <p class="text-sm mt-2"><a href="https://start9.com" class="text-blue-600 underline" target="_blank">start9.com</a></p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Korak-za-korakom: Nastavitev Umbrel vozlišča</h2>
+
+  <p class="mb-6">Tukaj je podroben vodič za nastavitev Umbrel vozlišča na Raspberry Pi:</p>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 1: Priprava strojne opreme</h3>
+    <p class="mb-3"><strong>Potrebujete:</strong></p>
+    <ul class="list-disc list-inside space-y-2 text-sm">
+      <li>Raspberry Pi 4 (4 GB ali 8 GB RAM) – ~50-80 €</li>
+      <li>1-2 TB SSD disk (priporočeno Samsung T7) – ~80-150 €</li>
+      <li>MicroSD kartica (32 GB ali več, SanDisk Ultra) – ~10 €</li>
+      <li>Napajalni adapter za Raspberry Pi – ~10 €</li>
+      <li>Ethernet kabel – ~5 €</li>
+      <li>Ohišje za Raspberry Pi (opcijsko) – ~15 €</li>
+    </ul>
+    <p class="mt-4 text-sm font-semibold">Skupaj: ~170-270 €</p>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 2: Namestitev Umbrel OS</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>Prenesite Umbrel OS z uradne strani: <a href="https://umbrel.com" class="text-blue-600 underline" target="_blank">umbrel.com</a></li>
+      <li>Prenesite Raspberry Pi Imager: <a href="https://www.raspberrypi.com/software/" class="text-blue-600 underline" target="_blank">raspberrypi.com/software</a></li>
+      <li>Vstavite MicroSD kartico v računalnik</li>
+      <li>Odprite Raspberry Pi Imager:
+        <ul class="ml-6 mt-2 space-y-1 text-sm">
+          <li>• Izberite "Choose OS" → Custom → Umbrel OS image</li>
+          <li>• Izberite "Choose Storage" → Vaša MicroSD kartica</li>
+          <li>• Kliknite "Write"</li>
+        </ul>
+      </li>
+      <li>Ko se zapiše, vstavite MicroSD v Raspberry Pi</li>
+    </ol>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 3: Prvi zagon</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>Priključite SSD disk na USB 3.0 vrata (modri USB)</li>
+      <li>Priključite Ethernet kabel na usmerjevalnik</li>
+      <li>Priključite napajanje – Raspberry Pi se bo zagnal</li>
+      <li>Počakajte 3-5 minut</li>
+      <li>Na računalniku ali telefonu v brskalniku odprite: <code class="bg-gray-800 text-white px-2 py-1 rounded">http://umbrel.local</code></li>
+      <li>Če ne deluje, preverite IP naslov v nastavitvah usmerjevalnika</li>
+    </ol>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 4: Začetna konfiguracija</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>Ustvarite račun (ime in geslo)</li>
+      <li><strong>POMEMBNO:</strong> Zapišite 12 besed varnostne kopije na papir</li>
+      <li>Potrdite varnostno kopijo</li>
+      <li>Počakajte, da se Bitcoin blockchain začne sinhronizirati (3-7 dni)</li>
+    </ol>
+  </div>
+
+  <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+    <p class="font-semibold text-red-800">⚠️ KRITIČNO: Varnostna kopija</p>
+    <ul class="list-disc list-inside mt-2 text-red-800 text-sm">
+      <li>Zapišite 12 besed na papir (NE v digitalni obliki)</li>
+      <li>Shranite na varnem mestu (požarno varen sef, bankovni trezor)</li>
+      <li>Brez varnostne kopije lahko izgubite VSA sredstva!</li>
+      <li>NIKOLI ne delite teh besed z nikomer</li>
+    </ul>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 5: Namestitev Lightning Network</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>V Umbrel vmesniku pojdite na "App Store"</li>
+      <li>Poiščite "Lightning Node" aplikacijo</li>
+      <li>Kliknite "Install"</li>
+      <li>Počakajte, da se namesti (5-10 minut)</li>
+      <li>Odprite Lightning Node aplikacijo</li>
+      <li>Ustvarite novo Lightning denarnico</li>
+      <li>ZNOVA zapišite varnostno kopijo (dodatnih 24 besed)</li>
+    </ol>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Upravljanje kanalov</h2>
+
+  <p class="mb-6">Ko je vaše vozlišče pripravljeno, morate odpreti Lightning kanale za pošiljanje in prejemanje plačil:</p>
+
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-5 mb-6">
+    <h3 class="font-bold mb-3">Kaj so kanali?</h3>
+    <p class="text-sm">Lightning kanali so "cevi" za prenos sredstev. Odprete jih z določeno količino Bitcoina, ki jo lahko nato uporabljate za plačila. Vsak kanal ima dva partnerja, ki si izmenjujeta sredstva.</p>
+  </div>
+
+  <div class="space-y-6 mb-8">
+    <div>
+      <h3 class="font-bold text-lg mb-2">Odpiranje kanalov</h3>
+      <ol class="list-decimal list-inside space-y-2 text-sm">
+        <li>Napolnite svojo on-chain denarnico (pošljite Bitcoin na vozlišče)</li>
+        <li>Počakajte na potrditev (1-3 potrditve)</li>
+        <li>V Lightning aplikaciji izberite "Open Channel"</li>
+        <li>Vnesite node ID partnerja (ali skenirajte QR)</li>
+        <li>Izberite velikost kanala (priporočeno: 500.000 - 5.000.000 satoshis)</li>
+        <li>Potrdite transakcijo</li>
+        <li>Počakajte 3-6 potrditev (30-60 minut)</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-lg mb-2">S kom odpreti kanale?</h3>
+      <p class="text-sm mb-3">Za začetek priporočamo povezavo z dobro vzpostavljenimi vozlišči:</p>
+      <ul class="list-disc list-inside space-y-1 text-sm">
+        <li><strong>ACINQ</strong> – Veliko vozlišče z dobro likvidnostjo</li>
+        <li><strong>Bitrefill</strong> – Povezava do storitev</li>
+        <li><strong>LN Big</strong> – Veliko routing vozlišče</li>
+        <li><strong>WalletOfSatoshi</strong> – Priljubljena denarnica</li>
+      </ul>
+      <p class="text-sm mt-3">Uporabite tudi <a href="https://1ml.com" class="text-blue-600 underline" target="_blank">1ml.com</a> za iskanje primernih vozlišč.</p>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-lg mb-2">Likvidnost</h3>
+      <p class="text-sm mb-3">Za <strong>pošiljanje</strong> plačil potrebujete lokalno likvidnost (sredstva na vaši strani kanala).</p>
+      <p class="text-sm mb-3">Za <strong>prejemanje</strong> plačil potrebujete oddaljeno likvidnost (sredstva na strani partnerja).</p>
+      <p class="text-sm">To lahko uredite z:</p>
+      <ul class="list-disc list-inside space-y-1 text-sm">
+        <li>Vhodno kanalom (inbound channel) – partner odpre kanal proti vam</li>
+        <li>Loop Out/In – swap storitve (LightningLabs)</li>
+        <li>Lightning Pool – nakup likvidnosti</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Vzdrževanje in varnost</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-green-50 border border-green-500 p-5 rounded">
+      <h3 class="font-bold mb-3">✅ Dobre prakse</h3>
+      <ul class="text-sm space-y-2">
+        <li>Redno posodabljajte Umbrel in aplikacije</li>
+        <li>Preverite vozlišče vsaj enkrat tedensko</li>
+        <li>Spremljajte stanje kanalov</li>
+        <li>Varnostne kopije shranite na več lokacij</li>
+        <li>Uporabite UPS (neprekinjeno napajanje)</li>
+        <li>Omogočite Tor za zasebnost</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-50 border border-red-500 p-5 rounded">
+      <h3 class="font-bold mb-3">⚠️ Česa se izogibati</h3>
+      <ul class="text-sm space-y-2">
+        <li>Ne izklapljajte vozlišča nepričakovano</li>
+        <li>Ne odpirajte kanalov s sumljivimi vozlišči</li>
+        <li>Ne hranite vseh sredstev v Lightning kanalih</li>
+        <li>Ne uporabljajte šibkih gesel</li>
+        <li>Ne delite dostopov z neznanimi osebami</li>
+        <li>Ne ignorirajte varnostnih posodobitev</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Napredne funkcije</h2>
+
+  <div class="space-y-4 mb-8">
+    <div>
+      <h3 class="font-semibold">Tor integracija</h3>
+      <p class="text-sm text-gray-700">Omogočite Tor v Umbrel nastavitvah za popolno zasebnost vašega vozlišča. To skrije vaš IP naslov.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">BTCPay Server</h3>
+      <p class="text-sm text-gray-700">Namestite BTCPay Server iz Umbrel trgovine za sprejemanje plačil v vaši trgovini.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ride The Lightning (RTL)</h3>
+      <p class="text-sm text-gray-700">Napredno orodje za upravljanje kanalov in analizo vozlišča.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Thunderhub</h3>
+      <p class="text-sm text-gray-700">Alternativni vmesnik za upravljanje Lightning vozlišča z lepšo vizualizacijo.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Mempool</h3>
+      <p class="text-sm text-gray-700">Lastni Bitcoin blockchain explorer za spremljanje transakcij.</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Pogosta vprašanja</h2>
+
+  <div class="space-y-4 mb-8">
+    <div>
+      <h3 class="font-semibold">Koliko časa traja sinhronizacija blockchajna?</h3>
+      <p class="text-sm text-gray-700 mt-1">Na Raspberry Pi 4 z dobrim SSD diskom traja 3-7 dni za popolno sinhronizacijo ~600 GB Bitcoin blockchajna.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali lahko uporabljam zunaj svojega doma?</h3>
+      <p class="text-sm text-gray-700 mt-1">Da, preko Tor integracije ali s pomočjo VPN. Umbrel omogoča oddaljeni dostop.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Koliko sredstev naj dam v Lightning kanale?</h3>
+      <p class="text-sm text-gray-700 mt-1">Za začetek priporočamo 100-500 € skupaj v več kanalih. Ne dajajte vseh svojih Bitcoinov v Lightning – večino hranite on-chain.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali lahko zaslužim z routing provizijami?</h3>
+      <p class="text-sm text-gray-700 mt-1">Da, vendar je to zahtevno. Potrebujete veliko likvidnosti, dobre povezave in aktivno upravljanje. Večina zasluži le nekaj € mesečno. Ne začnite vozlišča samo zaradi zaslužka.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Kaj se zgodi, če moje vozlišče pade?</h3>
+      <p class="text-sm text-gray-700 mt-1">Če je vozlišče offline manj kot nekaj dni, ni problema. Če je offline več tednov, lahko partnerji zaprejo kanale in vaša sredstva se vrnejo on-chain. Zaradi tega je pomembno redno preverjanje.</p>
+    </div>
+  </div>
+
+  <div class="bg-green-50 border-l-4 border-green-500 p-5 mt-10 mb-8">
+    <h3 class="font-bold text-lg mb-2">🎉 Čestitamo!</h3>
+    <p class="mb-3">Če ste prišli do tu, ste zdaj del globalne, decentralizirane Lightning Network. Ste suvereni uporabnik Bitcoina in prispevate k najvarnejšemu plačilnemu sistemu na svetu.</p>
+    <p class="text-sm font-semibold">Naslednji koraki:</p>
+    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+      <li>Pridružite se Lightning skupnosti (Telegram, Reddit, Twitter)</li>
+      <li>Eksperimentirajte z različnimi aplikacijami v Umbrel trgovini</li>
+      <li>Naučite se več o upravljanju kanalov</li>
+      <li>Razmislite o zagonu BTCPay Server za svojo trgovino</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Dodatni viri</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li><a href="https://umbrel.com/umbrel-home" class="text-blue-600 underline" target="_blank">Umbrel uradna dokumentacija</a></li>
+    <li><a href="https://raspiblitz.org" class="text-blue-600 underline" target="_blank">RaspiBlitz GitHub</a></li>
+    <li><a href="https://lightning.engineering" class="text-blue-600 underline" target="_blank">Lightning Labs dokumentacija</a></li>
+    <li><a href="https://1ml.com" class="text-blue-600 underline" target="_blank">1ML – Lightning Network explorer</a></li>
+    <li><a href="https://amboss.space" class="text-blue-600 underline" target="_blank">Amboss – Node management in analitika</a></li>
+  </ul>
+
+  <a href="index.html" class="text-blue-600 underline mt-10 inline-block">⬅ Nazaj na glavno stran</a>
+</body>
+</html>

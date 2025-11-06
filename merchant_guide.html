@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vodič za trgovce - Sprejemanje Lightning plačil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 px-6 py-10 max-w-4xl mx-auto">
+  <nav class="mb-8 border-b pb-4">
+    <ul class="flex flex-wrap gap-4 text-blue-700 text-sm">
+      <li><a href="index.html" class="hover:underline">🏠 Domov</a></li>
+      <li><a href="getting_started.html" class="hover:underline">🚀 Začni</a></li>
+      <li><a href="wallet_comparison.html" class="hover:underline">💼 Denarnice</a></li>
+      <li><a href="merchant_guide.html" class="hover:underline font-semibold">🏪 Za trgovce</a></li>
+      <li><a href="node_setup.html" class="hover:underline">⚙️ Vozlišča</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-6">🏪 Vodič za trgovce: Sprejemanje Lightning plačil</h1>
+
+  <p class="mb-6 text-lg">Lightning Network ponuja trgovcem možnost sprejemanja <strong>takojšnjih, globalnih in skoraj brezplačnih</strong> plačil v Bitcoinu. Ta vodič vam bo pokazal, kako lahko tudi vi začnete sprejemati Lightning plačila.</p>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-10 mb-6">Zakaj sprejemati Lightning plačila?</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-green-50 border-l-4 border-green-500 p-5">
+      <h3 class="font-bold text-lg mb-3">✅ Prednosti za trgovce</h3>
+      <ul class="space-y-2 text-sm">
+        <li><strong>Brez povratnih plačil</strong> – Ni chargebackov kot pri kreditnih karticah</li>
+        <li><strong>Minimalne provizije</strong> – Običajno manj kot 0.1% (vs 2-3% pri karticah)</li>
+        <li><strong>Takojšnja plačila</strong> – Sredstva prejmete v sekundah</li>
+        <li><strong>Globalni dostop</strong> – Sprejmite plačila od vsepovsod brez mednarodnih provizij</li>
+        <li><strong>Zasebnost</strong> – Ni potrebe po KYC preverjanju</li>
+        <li><strong>Ni posrednikov</strong> – Direktna plačila brez bančnih omejitev</li>
+      </ul>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-5">
+      <h3 class="font-bold text-lg mb-3">📊 Primeri uporabe</h3>
+      <ul class="space-y-2 text-sm">
+        <li><strong>E-commerce</strong> – Spletne trgovine</li>
+        <li><strong>Gostinstvo</strong> – Kavarne, restavracije, bari</li>
+        <li><strong>Fizične lokacije</strong> – Point-of-Sale sistemi</li>
+        <li><strong>Digitalne storitve</strong> – SaaS, naročnine, API-ji</li>
+        <li><strong>Vsebine</strong> – Napitnine, paywalls, donacije</li>
+        <li><strong>Avtomatizacija</strong> – IoT naprave, parkirišča</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-10 mb-6">Izbira rešitve za vaše podjetje</h2>
+
+  <p class="mb-6">Obstajajo različne rešitve, odvisno od velikosti vašega podjetja in tehničnega znanja:</p>
+
+  <!-- BTCPay Server -->
+  <div class="bg-white border-2 border-green-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-green-800">BTCPay Server</h3>
+        <p class="text-sm text-gray-600">Samogostovana, odprtokodna plačilna rešitev</p>
+      </div>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">PRIPOROČENO</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Popolna neodvisnost – brez posrednikov</li>
+          <li>Brez mesečnih stroškov ali provizij</li>
+          <li>Integracije: WooCommerce, Shopify, Magento</li>
+          <li>Point-of-Sale aplikacija</li>
+          <li>Podpora za donacije in napitnine</li>
+          <li>Odprtokoden in aktivno vzdrževan</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Zahteve:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Potreben strežnik ali VPS hosting</li>
+          <li>Osnovno tehnično znanje</li>
+          <li>Vzdrževanje sistema</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno (strošek hostinga ~5-20 €/mesec)</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 1-3 ure za prvo namestitev</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Resne trgovce, ki želijo popoln nadzor in najnižje stroške</p>
+      <p class="text-sm mt-2"><a href="https://btcpayserver.org" class="text-blue-600 underline" target="_blank">btcpayserver.org</a></p>
+    </div>
+  </div>
+
+  <!-- OpenNode -->
+  <div class="bg-white border-2 border-blue-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-800">OpenNode</h3>
+        <p class="text-sm text-gray-600">Gostovana plačilna platforma</p>
+      </div>
+      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">HOSTOVANO</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Enostavna nastavitev (5 minut)</li>
+          <li>Ni potrebe po tehničnem znanju</li>
+          <li>Integracije za e-commerce platforme</li>
+          <li>API za razvijalce</li>
+          <li>Samodejno upravljanje</li>
+          <li>Profesionalna podpora</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Provizija 1% na transakcije</li>
+          <li>Gostovana rešitev (posrednik)</li>
+          <li>KYC potreben za večje zneske</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Cena:</strong> 1% provizija na transakcije</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 5-15 minut</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Začetnike in manjše trgovce brez tehničnega znanja</p>
+      <p class="text-sm mt-2"><a href="https://www.opennode.com" class="text-blue-600 underline" target="_blank">opennode.com</a></p>
+    </div>
+  </div>
+
+  <!-- Strike -->
+  <div class="bg-white border-2 border-purple-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-purple-800">Strike</h3>
+        <p class="text-sm text-gray-600">Lightning plačilna aplikacija</p>
+      </div>
+      <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">MOBILNO</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Zelo enostavna uporaba</li>
+          <li>Brez provizij za Lightning plačila</li>
+          <li>Pretvorba v fiat valuty</li>
+          <li>API za podjetja</li>
+          <li>Integracije (Shopify, WooCommerce)</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Ni dostopen v vseh državah</li>
+          <li>KYC potreben</li>
+          <li>Skrbniška rešitev</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno za Lightning (stroški za fiat pretvorbe)</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 10 minut</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Mobilne trgovce in ponudnike storitev</p>
+      <p class="text-sm mt-2"><a href="https://strike.me" class="text-blue-600 underline" target="_blank">strike.me</a></p>
+    </div>
+  </div>
+
+  <!-- Speed / Breez SDK -->
+  <div class="bg-white border-2 border-orange-500 rounded-lg p-6 mb-6 shadow-lg">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-800">Mobilne POS rešitve</h3>
+        <p class="text-sm text-gray-600">Breez, Swiss Bitcoin Pay</p>
+      </div>
+      <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">POINT-OF-SALE</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <p class="font-semibold mb-2">✅ Prednosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Idealno za fizične lokacije</li>
+          <li>Enostavno za natakarje/prodajalce</li>
+          <li>Ne-skrbniške opcije na voljo</li>
+          <li>QR koda za hitro plačilo</li>
+          <li>Takojšnja potrditev</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">⚠️ Pomanjkljivosti:</p>
+        <ul class="text-sm list-disc list-inside space-y-1">
+          <li>Potreben tablet ali telefon za vsako blagajno</li>
+          <li>Omejeno na mobilne naprave</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <p class="text-sm"><strong>Cena:</strong> Brezplačno ali minimalne provizije</p>
+      <p class="text-sm"><strong>Nastavitev:</strong> 15-30 minut</p>
+      <p class="text-sm"><strong>Idealno za:</strong> Kavarne, restavracije, stojnice, fizične trgovine</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Korak-za-korakom: Nastavitev BTCPay Server</h2>
+
+  <p class="mb-6">BTCPay Server je najbolj priljubljena rešitev za resne trgovce. Tukaj je poenostavljen vodič za namestitev:</p>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 1: Izbira gostovanja</h3>
+    <p class="mb-3">Imate tri možnosti:</p>
+    <div class="space-y-3">
+      <div class="bg-white p-4 rounded border">
+        <p class="font-semibold">A) VPS hosting (priporočeno)</p>
+        <p class="text-sm">Najemite virtualni strežnik (Lunanode, Voltage, Digital Ocean)</p>
+        <p class="text-sm text-gray-600">Stroški: 5-20 €/mesec</p>
+      </div>
+      <div class="bg-white p-4 rounded border">
+        <p class="font-semibold">B) Lastno strojno opremo (Raspberry Pi, star računalnik)</p>
+        <p class="text-sm">Namestite doma na svoje naprave</p>
+        <p class="text-sm text-gray-600">Stroški: Enkratni + električna energija</p>
+      </div>
+      <div class="bg-white p-4 rounded border">
+        <p class="font-semibold">C) Gostovana storitev (tretja stranka)</p>
+        <p class="text-sm">Uporabite BTCPay hosting ponudnika (npr. LunaNode BTCPay)</p>
+        <p class="text-sm text-gray-600">Stroški: 10-30 €/mesec</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 2: Namestitev BTCPay</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>Povežite se na svoj strežnik preko SSH</li>
+      <li>Zaženite BTCPay namestitev skript:
+        <pre class="bg-gray-800 text-white p-3 rounded mt-2 text-sm overflow-x-auto">git clone https://github.com/btcpayserver/btcpayserver-docker
+cd btcpayserver-docker
+./btcpay-setup.sh -i</pre>
+      </li>
+      <li>Sledite navodilom namestitve (izberite Bitcoin + Lightning)</li>
+      <li>Počakajte 30-60 minut na sinhronizacijo blockchajna</li>
+    </ol>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 3: Osnovna konfiguracija</h3>
+    <ol class="list-decimal list-inside space-y-3">
+      <li>Odprite BTCPay na: <code class="bg-gray-800 text-white px-2 py-1 rounded">https://vaša-domena.com</code></li>
+      <li>Ustvarite administratorski račun</li>
+      <li>Ustvarite novo trgovino (Store)</li>
+      <li>Povežite Bitcoin in Lightning denarnico</li>
+      <li>Nastavite željeno valuto (EUR, USD, itd.)</li>
+    </ol>
+  </div>
+
+  <div class="bg-gray-50 p-6 rounded-lg mb-6">
+    <h3 class="font-bold text-lg mb-4">Korak 4: Integracija v spletno trgovino</h3>
+    <p class="mb-3">BTCPay podpira številne platforme:</p>
+    <ul class="list-disc list-inside space-y-2 text-sm">
+      <li><strong>WooCommerce</strong> – Namestite BTCPay vtičnik</li>
+      <li><strong>Shopify</strong> – Uporabite BTCPay Shopify aplikacijo</li>
+      <li><strong>Magento</strong> – Namestite Magento 2 razširitev</li>
+      <li><strong>PrestaShop</strong> – Uporabite BTCPay modul</li>
+      <li><strong>Custom</strong> – Uporabite BTCPay API za lastno integracijo</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Point-of-Sale za fizične lokacije</h2>
+
+  <p class="mb-6">Če imate kavarno, restavracijo ali trgovino, potrebujete POS rešitev:</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-white border border-gray-300 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-3">BTCPay POS</h3>
+      <ul class="text-sm space-y-2">
+        <li>✅ Vgrajen v BTCPay Server</li>
+        <li>✅ Prilagodljiv vmesnik</li>
+        <li>✅ QR koda za plačilo</li>
+        <li>✅ Deluje na tabletu ali telefonu</li>
+      </ul>
+      <p class="text-sm mt-3 text-blue-600">Idealno če že uporabljate BTCPay</p>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-3">Breez POS</h3>
+      <ul class="text-sm space-y-2">
+        <li>✅ Mobilna aplikacija</li>
+        <li>✅ Enostavna za natakarje</li>
+        <li>✅ Ne-skrbniška</li>
+        <li>✅ Takojšnja nastavitev</li>
+      </ul>
+      <p class="text-sm mt-3 text-blue-600">Idealno za hitro uvedbo</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Promocija Lightning plačil</h2>
+
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-5 mb-6">
+    <h3 class="font-bold mb-3">💡 Nasveti za marketiranje</h3>
+    <ul class="space-y-2 text-sm">
+      <li>✅ Dodajte "Bitcoin Lightning sprejemamo" nalepko na vrata</li>
+      <li>✅ Oglašujte se na <strong>BTCMap.org</strong> – zemljevid trgovcev</li>
+      <li>✅ Ponudite 5-10% popust za Lightning plačila</li>
+      <li>✅ Delite svojo zgodbo na družbenih omrežjih</li>
+      <li>✅ Povežite se z lokalno Bitcoin skupnostjo</li>
+      <li>✅ Naučite osebje, kako deluje Lightning</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Pogosta vprašanja trgovcev</h2>
+
+  <div class="space-y-4 mb-8">
+    <div>
+      <h3 class="font-semibold">Kako pretvorim Bitcoin v eure?</h3>
+      <p class="text-sm text-gray-700 mt-1">Lahko uporabite izmenjave kot Bitstamp, Kraken ali lokalne Bitcoin menjalnice. Nekatere rešitve (npr. Strike, OpenNode) omogočajo tudi avtomatsko pretvorbo v fiat.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali moram plačati davek na Bitcoin prihodke?</h3>
+      <p class="text-sm text-gray-700 mt-1">Da, v večini držav je treba Bitcoin prihodke prijaviti kot dohodek. Posvetujte se s lokalnim davčnim svetovalcem za natančne informacije.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Kaj če stranka pošlje napačen znesek?</h3>
+      <p class="text-sm text-gray-700 mt-1">Lightning plačila zahtevajo točen znesek iz računa (invoice). Stranka ne more poslati napačnega zneska – ali se plačilo izvrši pravilno ali pa ne.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Koliko časa traja, da prejmem sredstva?</h3>
+      <p class="text-sm text-gray-700 mt-1">Lightning plačila so takojšnja – običajno manj kot 2 sekundi.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold">Ali potrebujem tehnično znanje?</h3>
+      <p class="text-sm text-gray-700 mt-1">Za BTCPay Server je koristno osnovno tehnično znanje (terminal, SSH). Za gostovane rešitve (OpenNode, Strike) ni potrebno tehnično znanje.</p>
+    </div>
+  </div>
+
+  <div class="bg-green-50 border-l-4 border-green-500 p-5 mt-10 mb-8">
+    <h3 class="font-bold text-lg mb-2">🚀 Pripravljeni na začetek?</h3>
+    <p class="mb-3">Priporočamo ta pristop:</p>
+    <ol class="list-decimal list-inside space-y-2 text-sm">
+      <li>Preizkusite s <strong>Wallet of Satoshi</strong> ali <strong>Phoenix</strong> kot preprosto POS rešitev</li>
+      <li>Ko ste prepričani, namestite <strong>BTCPay Server</strong> za dolgoročno uporabo</li>
+      <li>Integrirajte v svojo spletno trgovino ali POS sistem</li>
+      <li>Oglašujte se na BTCMap.org in lokalnih Bitcoin skupnostih</li>
+    </ol>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-blue-700 mt-12 mb-6">Dodatni viri</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li><a href="https://btcpayserver.org" class="text-blue-600 underline" target="_blank">BTCPay Server dokumentacija</a></li>
+    <li><a href="https://btcmap.org" class="text-blue-600 underline" target="_blank">BTCMap – Zemljevid Bitcoin trgovcev</a></li>
+    <li><a href="https://breez.technology" class="text-blue-600 underline" target="_blank">Breez POS rešitev</a></li>
+    <li><a href="https://www.opennode.com" class="text-blue-600 underline" target="_blank">OpenNode za trgovce</a></li>
+  </ul>
+
+  <a href="index.html" class="text-blue-600 underline mt-10 inline-block">⬅ Nazaj na glavno stran</a>
+</body>
+</html>
